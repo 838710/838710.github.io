@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>David's personal website, I guess</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #thing {
+                width: 80%;
+                margin: 10%;
+                margin-bottom: 0;
+                background-color: black;
+                border: 1px solid gray;
+            }
+            .slide {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <li><a href="page1.html">Homepage</a></li>
+            <li><a href="page2.html">Coding</a></li>
+            <li><a href="page3.html">Hobbies</a></li>
+            <li><a href="page4.html">Ambitions</a></li>
+            <li><a href="page5.html">Motivations</a></li>
+            <li style = float:right><a href="src.html" class="active">Source code</a></li>
+        </nav>
+
+        <h1> <br> Here's the code if you wanted to look at it, or at least the important bits</h1>
+        <p style="font-size: 10px; color: rgb(44, 47, 51);">nerd<br></p>
+        <p style="font-size: 10px;">also yes I know inspect element is a thing but I forgot about it and created this page, 
+        so enjoy the effort I put in okay? </p>
+        
+        <div class = "slide">
+            <h1 id="thing">HOMEPAGE</h1>
+            <img style="width: 80%;" src="page1.png" alt="">
+        </div>
+        <div class = "slide">
+            <h1 id="thing">CODING</h1>
+            <img style="width: 80%;" src="page2.png" alt="">
+        </div>
+        <div class = "slide">
+            <h1 id="thing">HOBBIES</h1>
+            <img style="width: 80%;" src="page3.png" alt="">
+        </div>
+        <div class = "slide">
+            <h1 id="thing">AMBITIONS</h1>
+            <img style="width: 80%;" src="page4.png" alt="">
+        </div>
+        <div class = "slide">
+            <h1 id="thing">MOTIVATIONS</h1>
+            <img style="width: 80%;" src="page5.png" alt="">
+        </div>
+        <div class = "slide">
+            <h1 id="thing">SOURCE CODE</h1>
+            <img style="width: 80%;" src="src.png" alt="">
+        </div>
+        <div class = "slide">
+            <h1 id="thing">STYLE SHEET</h1>
+            <img style="width: 80%;" src="css.png" alt="">
+        </div>
+
+        <br><br><br><br><br>
+        <nav style="position: sticky; bottom: 0;">
+            <li style="border: 1px solid gray" onclick="back()"><a>&#10094;</a></li>
+            <li style="border: 1px solid gray" onclick="next()"><a>&#10095;</a></li>
+            <!--https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        </nav>
+        <script>
+            var num = 1;
+            showslide(num);
+            function showslide(n) {
+                /*Index starts at 0, show actual thing will be one behind*/
+                var i;
+                var slides = document.getElementsByClassName("slide");
+                for(i = 0; i < slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                slides[n-1].style.display = "block";
+            }
+            function check(){
+                var slides = document.getElementsByClassName("slide");
+                if(num < 1) {num = slides.length;}
+                if(num > slides.length) {num = 1}
+            }
+            function back(){
+                num--;
+                check()
+                showslide(num);
+            }
+            function next(){
+                num++;
+                check()
+                showslide(num);
+            }
+        </script>
+    </body>  
+</html>
