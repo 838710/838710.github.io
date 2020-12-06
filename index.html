@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>David's personal website, I guess</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            
+        </style>
+        <script>
+            function hover(c) {
+                c.style.display = "block";
+                cap0.style.display = "none";
+            }
+            function hide(c) {
+                c.style.display = "none";
+                cap0.style.display = "block";
+            }
+            function forjuly(){
+                document.getElementById("July").style.color = "white"
+                document.getElementById("August").style.color = "gray"
+                document.getElementById("lonelyboi").style.color = "gray"
+            }
+            function foraug(){
+                document.getElementById("July").style.color = "gray"
+                document.getElementById("August").style.color = "white"
+                document.getElementById("bridge").style.color = "gray"
+            }
+            function blank(){
+                document.getElementById("July").style.color = "white"
+                document.getElementById("August").style.color = "white"
+                document.getElementById("lonelyboi").style.color = "white"
+                document.getElementById("bridge").style.color = "white"   
+            }
+        </script>
+    </head>
+
+    <body>
+        <nav>
+            <li><a href="page1.html" class="active">Homepage</a></li>
+            <li><a href="page2.html">Coding</a></li>
+            <li><a href="page3.html">Hobbies</a></li>
+            <li><a href="page4.html">Ambitions</a></li>
+            <li><a href="page5.html">Motivations</a></li>
+            <li style = float:right><a href="src.html">Source code</a></li>
+        </nav>
+        <div style="background-image: url(le-me.png);" class="banner">
+            <h1>HOMEPAGE</h1>
+        </div>
+        <h3>Hey, I'm David. I made this website. I uh... am a person? <br> In all seriousness, here's the homepage. Basically, a general overview of me and
+            this website.
+        </h3>
+        <p style="margin: 20px"><br><br><br><br>I'm 15 years old and was born in Milford, Connecticut. I'm a weird amalgamation of 
+            tech nerd, computer hermit, bookworm, and socially inept stuck in an emo looking exterior. <br>
+            This website goes into further depth about me: who I am, what I do, what I want to do and why I want to do things, etc.
+            Everything important. <br> <br>
+            So why don't you give that fancy navbar of mine a try, and take a gander at the rest of the site? Should be right there at 
+            the top of the page, I set its position to sticky after all.
+        </p>
+        <br>
+        <h3> <strong>Some random facts about this website:</strong></h3>
+        <p>[Placeholder text] <br>
+            [Placeholder text]
+        </p>
+        <br>
+
+        
+        <h3>A timeline of this website:</h3>
+        <div style="border: 1px solid gray; margin-bottom: 0px; height: 30px;" class="topcal">
+            <li>SUN.</li>
+            <li>MON.</li>
+            <li>TUES.</li>
+            <li>WED.</li>
+            <li>THU.</li>
+            <li>FRI.</li>
+            <li>SAT.</li>
+        </div>
+        <div class="calender" style="border: 1px solid gray;">
+            <div id="July" class="calender" onmouseover="forjuly()" onmouseout="blank()">
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li onmouseover="hover(cap1)" onmouseout="hide(cap1)">20</li>
+                <li onmouseover="hover(cap2)" onmouseout="hide(cap2)">21</li>
+                <li onmouseover="hover(cap3)" onmouseout="hide(cap3)">22</li>
+                <li onmouseover="hover(cap4)" onmouseout="hide(cap4)">23</li>
+                <li onmouseover="hover(cap5)" onmouseout="hide(cap5)">24</li>
+                <li onmouseover="hover(cap6)" onmouseout="hide(cap6)">25</li>    
+            </div>
+            <div id="bridge" onmouseover="forjuly()" onmouseout="blank()" style="border-bottom: 1px solid gray;">
+                <li onmouseover="hover(cap7)" onmouseout="hide(cap7)">26</li>
+                <li onmouseover="hover(cap8)" onmouseout="hide(cap8)">27</li>
+                <li onmouseover="hover(cap9)" onmouseout="hide(cap9)">28</li>
+                <li onmouseover="hover(cap10)" onmouseout="hide(cap10)">29</li>
+                <li onmouseover="hover(cap4)" onmouseout="hide(cap4)">30</li>
+                <li onmouseover="hover(cap6)" onmouseout="hide(cap6)">31</li>
+            </div>
+            <li id="lonelyboi" onmouseover="foraug(); hover(cap11)" onmouseout="blank(); hide(cap11)"
+            style="border-top: 1px solid gray; border-left: 1px solid gray;">1</li>
+            <div id="August" class="calender" onmouseover="foraug()" onmouseout="blank()">
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+            </div>
+        </div>
+        <div class="cap" id="cap0"> <span>This is a caption.</span> <br> Mouse over a date starting from the 20th to see what I did on that day.</div>
+        <div class="cap" id="cap1"> <span>Monday, July 20, 2020:</span> <br> Created all 6 pages, created several iterations of the navbar from scratch.</div>
+        <div class="cap" id="cap2"> <span>Tuesday, July 21, 2020:</span> <br> Finalized the navbar, did some work on the homepage, and pinned down the
+            aesthetic of the website.</div>
+        <div class="cap" id="cap3"> <span>Wednesday, July 22, 2020:</span> <br>
+            Wrote down <!--most (or -->all<!--)--> of the text content of the website, experimented a bit with having a block of text and an image on the same
+            row.<!-- That includes this page, which is why (as of writing this) the "or all" part is included. Kinda uncertain, y'know? Don't even
+            know if this'll make it to the final version of the site. Heh heh, maybe it will as an Easter Egg!--></div>
+        <div class="cap" id="cap4"> <span>Thursday, July 23, 2020:</span> <br> Took a break :)</div>
+        <div class="cap" id="cap5"> <span>Friday, July 24, 2020:</span> <br>
+            Added images to the Coding page, polished the timeline to make it user interactive. Planned a prettier version, with a rough
+            idea of what it's supposed to look like. Will use CSS flexbox and Javascript, most likely.</div>
+        <div class="cap" id="cap6"><span>Saturday, July 25, 2020:</span> <br>
+            Day of no work :(</div>
+        <div class="cap" id="cap7"> <span>Sunday, July 26, 2020:</span> <br>
+            Added an interactive image on the Coding page, and created the calender.</div>
+        <div class="cap" id="cap8"> <span>Monday, July 27, 2020:</span> <br>
+                Finished up the Hobbies page with interactive images galore. Also tweaked the external style sheet to make work more efficient.</div>
+        <div class="cap" id="cap9"> <span>Tuesday, July 28, 2020:</span> <br>
+            Made the title banners look pretty.</div>
+        <div class="cap" id="cap10"> <span>Wednesday, July 29, 2020:</span> <br>
+            Did some experimenting with the calender UI, using a heck ton of Javascript, CSS, and HTML shenanagins to get the months to be distinguishable
+            when you hover over one or the other.</div>
+        <div class="cap" id="cap11"> <span>Saturday, August 1, 2020:</span> <br>
+            Did some more experimenting with making the website look pretty; finished up page 4 and 5 in the process. Probably room for improvement there,
+            but it's good for now.</div>
+        <br><br><br><br><br>
+    </body>
+</html>
